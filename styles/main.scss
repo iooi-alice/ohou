@@ -1,5 +1,14 @@
+@import './variables/breakpoint';
+@import './variables/colors';
+@import './variables/typography';
+
+@import './base/normalize';
+@import './base/reset';
+@import './base/globals';
 @import './base/icon-fonts';
 
-* {
-  font-family: 'Noto Sans KR', sans-serif;
-}
+@import './mixins/flexbox';
+@import './mixins/positions';
+@import './mixins/responsive';
+@import './mixins/scrollbar';
+@import './mixins/text-style';
