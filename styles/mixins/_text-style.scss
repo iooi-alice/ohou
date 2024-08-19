@@ -1,3 +1,5 @@
+/* stylelint-disable scss/no-global-function-names */
+
 @mixin text-style-12() {
   font-size: $font-size-12;
   line-height: $line-height-12;
@@ -59,7 +61,7 @@
     @include text-style-24;
   }
 
-  @if meta.type-of($color) == color {
+  @if type-of($color) == color {
     color: $color;
   }
 }
