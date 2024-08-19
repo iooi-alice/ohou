@@ -6,11 +6,33 @@
     @include flexbox(between);
 
     height: 50px;
+
+    @include responsive(T) {
+      height: 80px;
+    }
+  }
+
+  &-left {
+    @include responsive(T) {
+      @include flexbox($gap: 32px);
+    }
   }
 
   &-right {
     .button-group {
       @include flexbox(end, $gap: 4px);
+
+      @include responsive(T) {
+        gap: 8px;
+      }
+    }
+
+    @include responsive(T) {
+      @include flexbox(end, $gap: 24px);
+    }
+
+    .input-group {
+      width: 264px;
     }
   }
 
@@ -38,6 +60,23 @@
       display: block;
       width: auto;
       height: 20px;
+
+      @include responsive(T) {
+        height: 24px;
+      }
+    }
+
+    @include responsive(T) {
+      position: static;
+      transform: none;
+    }
+  }
+
+  .btn-primary {
+    width: 88px;
+
+    i {
+      margin-left: 4px;
     }
   }
 }
