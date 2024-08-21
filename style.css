@@ -1035,6 +1035,25 @@ i {
 .gnb-right .input-group {
   width: 264px;
 }
+.gnb-right .gnb-auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.gnb-right .gnb-auth a {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #8c8d96;
+  font-weight: 700;
+}
+.gnb-right .gnb-auth a:hover {
+  color: #3da5f5;
+}
+.gnb-right .gnb-auth a:first-child {
+  margin-left: 9px;
+}
 .gnb .logo {
   position: absolute;
   top: 50%;

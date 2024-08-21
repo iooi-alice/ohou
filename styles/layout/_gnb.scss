@@ -34,6 +34,24 @@
     .input-group {
       width: 264px;
     }
+
+    .gnb-auth {
+      @include flexbox($gap: 12px);
+
+      a {
+        @include text-style(14, $secondary);
+
+        font-weight: 700;
+
+        &:hover {
+          color: $blue;
+        }
+
+        &:first-child {
+          margin-left: 9px;
+        }
+      }
+    }
   }
 
   .logo {
