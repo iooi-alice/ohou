@@ -1,8 +1,20 @@
-.my-memu {
+.my-menu {
   $button-size: 32px;
   $tooltip-size: 12px;
 
   position: relative;
+
+  &.is-active {
+    .my-menu-button {
+      border-color: $blue;
+    }
+
+    .my-menu-content {
+      transform: translate3d(-50%, 0, 0);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 
   &-button {
     overflow: hidden;
@@ -16,8 +28,7 @@
 
     transition: border-color 200ms ease-in-out;
 
-    &:hover,
-    &.is-active {
+    &:hover {
       border-color: $blue;
     }
 
@@ -32,8 +43,14 @@
     @include pos-center-x;
 
     top: $button-size + $tooltip-size + 8px;
+    transform: translate3d(-50%, -10px, 0);
+
+    visibility: hidden;
+    opacity: 0;
     border-radius: 4px;
     box-shadow: $dropdown-shadow;
+
+    transition: visibility 200ms ease-in-out, opacity 200ms ease-in-out, transform 200ms ease-in-out;
 
     &::before,
     &::after {
