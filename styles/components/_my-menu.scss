@@ -1,11 +1,36 @@
 .my-memu {
+  $button-size: 32px;
   $tooltip-size: 12px;
 
   position: relative;
 
+  &-button {
+    overflow: hidden;
+
+    width: $button-size;
+    height: $button-size;
+
+    border: 3px solid $white;
+    border-radius: 50%;
+
+    transition: border-color 200ms ease-in-out;
+
+    &:hover,
+    &.is-active {
+      border-color: $blue;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
   &-content {
     @include pos-center-x;
 
+    top: $button-size + $tooltip-size + 8px;
     border-radius: 4px;
     box-shadow: $dropdown-shadow;
 
