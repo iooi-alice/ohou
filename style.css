@@ -1238,14 +1238,20 @@ i {
   margin-left: 4px;
 }
 
-body {
-  background-color: black;
-}
-
 .sidebar {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  overscroll-behavior: contain;
   width: 240px;
+  height: 100vh;
   padding: 32px 20px;
   background-color: #fff;
+}
+.sidebar::-webkit-scrollbar {
+  display: none !important;
 }
 .sidebar-header {
   padding: 0 12px;
@@ -1327,6 +1333,16 @@ body {
 }
 .sidebar-user-menu .user-menu-item a:active {
   color: #3da5f5;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(63, 65, 80, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */
