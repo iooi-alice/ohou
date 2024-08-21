@@ -912,11 +912,13 @@ i {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 32px;
   height: 32px;
   font-size: 24px;
   color: #8c8d96;
-  transition: color 200ms ease-in-out;
+  border-radius: 50%;
+  transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 }
 .gnb-icon-button.is-menu {
   color: #3da5f5;
@@ -924,8 +926,37 @@ i {
 .gnb-icon-button.is-menu:active {
   color: #3186c4;
 }
+.gnb-icon-button.is-cart i {
+  position: relative;
+  top: 1px;
+  right: 1px;
+}
 .gnb-icon-button:active {
   color: #3f4150;
+}
+.gnb-icon-button .badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 4px;
+  font-size: 10px;
+  line-height: 16px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: -0.01em;
+  background-color: #f86d7d;
+  border-radius: 8px;
+}
+@media screen and (min-width: 768px) {
+  .gnb-icon-button:hover {
+    background-color: #3da5f5;
+  }
+  .gnb-icon-button:hover i {
+    color: #fff;
+  }
 }
 
 .container {
