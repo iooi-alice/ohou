@@ -18,36 +18,34 @@
     @include pos-center-x;
 
     bottom: 16px;
+  }
 
-    .thumbnail {
-      &-list {
-        @include flexbox($gap: 8px);
+  .thumbnail-list {
+    @include flexbox($gap: 8px);
+  }
+
+  .thumbnail-item {
+    &.tns-nav-active {
+      button {
+        transform: scale(1.3333);
+        opacity: 1;
+        background-color: $white;
       }
+    }
 
-      &-item {
-        &.tns-nav-active {
-          button {
-            transform: scale(1.3333);
-            opacity: 1;
-            background-color: $white;
-          }
-        }
+    button {
+      width: 6px;
+      height: 6px;
 
-        button {
-          width: 6px;
-          height: 6px;
+      opacity: 0.7;
+      background-color: $white;
+      border-radius: 50%;
 
-          opacity: 0.7;
-          background-color: $white;
-          border-radius: 50%;
+      transition: transform 100ms ease-in-out opacity 100ms ease-in-out;
+    }
 
-          transition: transform 100ms ease-in-out opacity 100ms ease-in-out;
-        }
-
-        img {
-          display: none;
-        }
-      }
+    img {
+      display: none;
     }
   }
 }
