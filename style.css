@@ -1250,27 +1250,80 @@ i {
   transform: translateX(-50%);
   bottom: 16px;
 }
-.product-carousel-thumbnail .thumbnail-list {
+.product-carousel .thumbnail-list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
 }
-.product-carousel-thumbnail .thumbnail-item.tns-nav-active button {
+.product-carousel .thumbnail-item.tns-nav-active button {
   transform: scale(1.3333);
   opacity: 1;
   background-color: #fff;
 }
-.product-carousel-thumbnail .thumbnail-item button {
+.product-carousel .thumbnail-item button {
   width: 6px;
   height: 6px;
   opacity: 0.7;
   background-color: #fff;
+  border: 2px solid transparent;
   border-radius: 50%;
   transition: transform 100ms ease-in-out opacity 100ms ease-in-out;
 }
-.product-carousel-thumbnail .thumbnail-item img {
+.product-carousel .thumbnail-item img {
   display: none;
+}
+@media screen and (min-width: 768px) {
+  .product-carousel {
+    padding-right: 30px;
+  }
+  .product-carousel-slider {
+    overflow: hidden;
+    margin: 0;
+    margin-bottom: 8px;
+    border-radius: 4px;
+  }
+  .product-carousel-thumbnail {
+    position: static;
+    transform: none;
+  }
+  .product-carousel .thumbnail-list {
+    justify-content: flex-start;
+  }
+  .product-carousel .thumbnail-item.tns-nav-active button {
+    transform: scale(1);
+    border: 2px solid #3da5f5;
+  }
+  .product-carousel .thumbnail-item button {
+    overflow: hidden;
+    width: 56px;
+    height: 56px;
+    opacity: 1;
+    border-radius: 4px;
+  }
+  .product-carousel .thumbnail-item img {
+    display: block;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product-carousel {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 8px;
+    flex-direction: row-reverse;
+  }
+  .product-carousel-slider {
+    width: 500px;
+    height: 500px;
+  }
+  .product-carousel .thumbnail-list {
+    flex-direction: column;
+  }
+  .product-carousel .thumbnail-item button {
+    width: 75px;
+    height: 75px;
+  }
 }
 
 .container {
@@ -1283,7 +1336,6 @@ i {
 @media screen and (min-width: 768px) {
   .container {
     grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 20px;
     padding: 0 30px;
   }
 }

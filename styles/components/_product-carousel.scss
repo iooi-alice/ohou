@@ -92,4 +92,26 @@
       }
     }
   }
+
+  @include responsive(D) {
+    @include flexbox(end, start, 8px);
+
+    flex-direction: row-reverse;
+
+    &-slider {
+      width: 500px;
+      height: 500px;
+    }
+
+    .thumbnail-list {
+      flex-direction: column;
+    }
+
+    .thumbnail-item {
+      button {
+        width: 75px;
+        height: 75px;
+      }
+    }
+  }
 }
