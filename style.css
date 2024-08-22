@@ -1232,6 +1232,15 @@ i {
   }
 }
 
+.product-carousel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.product-carousel-thumbnail {
+  display: none;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1260,6 +1269,20 @@ i {
 @media screen and (min-width: 768px) {
   .row {
     grid-column: span 12;
+  }
+}
+
+.row-carousel {
+  grid-column: span 4;
+}
+@media screen and (min-width: 768px) {
+  .row-carousel {
+    grid-column: span 6;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .row-carousel {
+    grid-column: span 7;
   }
 }
 
