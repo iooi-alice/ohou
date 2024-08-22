@@ -26,3 +26,15 @@
     grid-column: span 12;
   }
 }
+
+.row-carousel {
+  grid-column: span 4;
+
+  @include responsive(T) {
+    grid-column: span 6;
+  }
+
+  @include responsive(D) {
+    grid-column: span 7;
+  }
+}
