@@ -33,7 +33,16 @@
       &-review {
         @include flexbox(start, $gap: 8px);
 
+        .star-rating {
+          @include star-rating(13px);
+
+          @include responsive(T) {
+            font-size: 16px;
+          }
+        }
+
         p {
+          @include inline-flexbox;
           @include text-style(13, $blue);
 
           font-weight: 700;
@@ -43,50 +52,43 @@
   }
 
   &-price {
-    position: relative;
+    .info-price-wrapper {
+      @include flexbox(start, end, 16px);
 
-    .price-inner {
-      @include responsive(T) {
-        @include flexbox(start, end);
-
-        margin-bottom: 12px;
-      }
+      margin-bottom: 12px;
     }
 
     .info-original-price {
       @include flexbox(start);
+    }
 
-      .discount-ratio {
-        @include inline-flexbox;
+    .discount-rate {
+      @include inline-flexbox(start, end);
 
-        font-size: 20px;
-        font-weight: 700;
-        line-height: 24px;
-        color: $blue;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      color: $blue;
+
+      .rate {
+        font-family: $font-price;
+      }
+
+      .percent {
+        font-family: $font-main;
+      }
+
+      @include responsive(T) {
+        margin-right: 16px;
+        line-height: 36px;
 
         .rate {
-          font-family: $font-price;
+          font-size: 44px;
         }
 
         .percent {
-          font-family: $font-main;
+          line-height: 20px;
         }
-
-        @include responsive(T) {
-          margin-right: 16px;
-
-          .rate {
-            font-size: 44px;
-          }
-        }
-      }
-    }
-
-    .price-off {
-      @include responsive(T) {
-        position: absolute;
-        top: 0;
-        left: 92px;
       }
     }
 
@@ -96,6 +98,7 @@
       margin-bottom: 12px;
 
       @include responsive(T) {
+        gap: 8px;
         margin-bottom: 0;
 
         .amount {
@@ -112,6 +115,7 @@
       @include text-style(13, $secondary);
 
       strong {
+        margin-right: 3px;
         font-weight: 700;
         color: $blue;
       }
