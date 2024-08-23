@@ -1,0 +1,43 @@
+.order-form {
+  @include column-flexbox(start, start, 20px);
+
+  .order-inputs {
+    width: 100%;
+
+    div:first-child {
+      margin-bottom: 8px;
+    }
+  }
+
+  .order-checkouts {
+    .checkout-list {
+      @include column-flexbox(start, start, $gap: 8px);
+    }
+
+    .checkout-item {
+      width: 100%;
+    }
+  }
+
+  .order-summary {
+    @include flexbox(between);
+
+    width: 100%;
+
+    dt {
+      @include text-style(13, $dark);
+
+      font-weight: 700;
+    }
+  }
+
+  .button-group {
+    width: 100%;
+
+    @include flexbox(start, $gap: 8px);
+
+    button {
+      width: 100%;
+    }
+  }
+}
