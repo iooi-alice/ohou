@@ -1326,6 +1326,150 @@ i {
   }
 }
 
+.product-info {
+  padding: 20px 0;
+}
+@media screen and (min-width: 768px) {
+  .product-info {
+    padding: 0;
+  }
+}
+.product-info-header {
+  margin-bottom: 16px;
+}
+.product-info-header .info-brand {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: #3da5f5;
+  font-weight: 700;
+}
+.product-info-header .info-brand:active {
+  opacity: 0.4;
+}
+.product-info-header .info-title {
+  margin: 0 0 4px;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .product-info-header .info-title {
+    margin: 8px 0;
+  }
+}
+.product-info-header .info-review {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+}
+.product-info-header .info-review p {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: #3da5f5;
+  font-weight: 700;
+}
+.product-info-price {
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .product-info-price .price-inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    margin-bottom: 12px;
+  }
+}
+.product-info-price .info-original-price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.product-info-price .info-original-price .discount-ratio {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  color: #3da5f5;
+}
+.product-info-price .info-original-price .discount-ratio .rate {
+  font-family: "Tahoma", sans-serif;
+}
+.product-info-price .info-original-price .discount-ratio .percent {
+  font-family: "Noto Sans KR", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .product-info-price .info-original-price .discount-ratio {
+    margin-right: 16px;
+  }
+  .product-info-price .info-original-price .discount-ratio .rate {
+    font-size: 44px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .product-info-price .price-off {
+    position: absolute;
+    top: 0;
+    left: 92px;
+  }
+}
+.product-info-price .info-sale-price {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+@media screen and (min-width: 768px) {
+  .product-info-price .info-sale-price {
+    margin-bottom: 0;
+  }
+  .product-info-price .info-sale-price .amount {
+    font-size: 32px;
+  }
+  .product-info-price .info-sale-price .currency {
+    font-size: 28px;
+  }
+}
+.product-info-price .info-point {
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  color: #8c8d96;
+}
+.product-info-price .info-point strong {
+  font-weight: 700;
+  color: #3da5f5;
+}
+.product-info-delivery {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  color: #3f4150;
+  width: 100%;
+  margin: 16px 0 0;
+  padding: 12px 0 0;
+  border-top: 1px solid #e0e2e7;
+}
+.product-info-delivery span {
+  display: block;
+  margin-bottom: 2px;
+}
+@media screen and (min-width: 768px) {
+  .product-info-delivery {
+    margin: 20px 0 0;
+    padding: 16px 0 20px;
+    border-bottom: 1px solid #e0e2e7;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .product-info-delivery {
+    margin: 20px 0;
+  }
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1367,6 +1511,20 @@ i {
 @media screen and (min-width: 1200px) {
   .row-carousel {
     grid-column: span 7;
+  }
+}
+
+.row-production-selling {
+  grid-column: span 4;
+}
+@media screen and (min-width: 768px) {
+  .row-production-selling {
+    grid-column: span 6;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .row-production-selling {
+    grid-column: span 5;
   }
 }
 
