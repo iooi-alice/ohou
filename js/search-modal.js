@@ -12,6 +12,7 @@ searchButton.addEventListener('click', openSearchModal);
 
 function closeSearchModal() {
   searchModal.classList.remove('is-active');
+  searchOverlay.classList.remove('is-active');
 }
 
 closeButton.addEventListener('click', closeSearchModal);
