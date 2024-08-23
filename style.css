@@ -572,32 +572,56 @@ i {
   height: 32px;
 }
 
-.star-rating-24, .star-rating-20, .star-rating-16, .star-rating-13 {
+.star-rating-13 {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  font-size: 13px;
 }
-.star-rating-24 .ic-star, .star-rating-20 .ic-star, .star-rating-16 .ic-star, .star-rating-13 .ic-star {
+.star-rating-13 .ic-star {
   color: #e0e2e7;
 }
-.star-rating-24 .ic-star.is-active, .star-rating-20 .ic-star.is-active, .star-rating-16 .ic-star.is-active, .star-rating-13 .ic-star.is-active {
+.star-rating-13 .ic-star.is-active {
   color: #3da5f5;
 }
 
-.star-rating-13 {
-  font-size: 13px;
-}
-
 .star-rating-16 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   font-size: 16px;
+}
+.star-rating-16 .ic-star {
+  color: #e0e2e7;
+}
+.star-rating-16 .ic-star.is-active {
+  color: #3da5f5;
 }
 
 .star-rating-20 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   font-size: 20px;
+}
+.star-rating-20 .ic-star {
+  color: #e0e2e7;
+}
+.star-rating-20 .ic-star.is-active {
+  color: #3da5f5;
 }
 
 .star-rating-24 {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   font-size: 24px;
+}
+.star-rating-24 .ic-star {
+  color: #e0e2e7;
+}
+.star-rating-24 .ic-star.is-active {
+  color: #3da5f5;
 }
 
 .price-off, .price-16,
@@ -1362,57 +1386,70 @@ i {
   justify-content: flex-start;
   gap: 8px;
 }
+.product-info-header .info-review .star-rating {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 13px;
+}
+.product-info-header .info-review .star-rating .ic-star {
+  color: #e0e2e7;
+}
+.product-info-header .info-review .star-rating .ic-star.is-active {
+  color: #3da5f5;
+}
+@media screen and (min-width: 768px) {
+  .product-info-header .info-review .star-rating {
+    font-size: 16px;
+  }
+}
 .product-info-header .info-review p {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 13px;
   line-height: 20px;
   letter-spacing: -0.01em;
   color: #3da5f5;
   font-weight: 700;
 }
-.product-info-price {
-  position: relative;
-}
-@media screen and (min-width: 768px) {
-  .product-info-price .price-inner {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    margin-bottom: 12px;
-  }
+.product-info-price .info-price-wrapper {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-bottom: 12px;
 }
 .product-info-price .info-original-price {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-.product-info-price .info-original-price .discount-ratio {
+.product-info-price .discount-rate {
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  justify-content: flex-start;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
   color: #3da5f5;
 }
-.product-info-price .info-original-price .discount-ratio .rate {
+.product-info-price .discount-rate .rate {
   font-family: "Tahoma", sans-serif;
 }
-.product-info-price .info-original-price .discount-ratio .percent {
+.product-info-price .discount-rate .percent {
   font-family: "Noto Sans KR", sans-serif;
 }
 @media screen and (min-width: 768px) {
-  .product-info-price .info-original-price .discount-ratio {
+  .product-info-price .discount-rate {
     margin-right: 16px;
+    line-height: 36px;
   }
-  .product-info-price .info-original-price .discount-ratio .rate {
+  .product-info-price .discount-rate .rate {
     font-size: 44px;
   }
-}
-@media screen and (min-width: 768px) {
-  .product-info-price .price-off {
-    position: absolute;
-    top: 0;
-    left: 92px;
+  .product-info-price .discount-rate .percent {
+    line-height: 20px;
   }
 }
 .product-info-price .info-sale-price {
@@ -1424,6 +1461,7 @@ i {
 }
 @media screen and (min-width: 768px) {
   .product-info-price .info-sale-price {
+    gap: 8px;
     margin-bottom: 0;
   }
   .product-info-price .info-sale-price .amount {
@@ -1440,6 +1478,7 @@ i {
   color: #8c8d96;
 }
 .product-info-price .info-point strong {
+  margin-right: 3px;
   font-weight: 700;
   color: #3da5f5;
 }
