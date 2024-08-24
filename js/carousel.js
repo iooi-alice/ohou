@@ -1,22 +1,19 @@
-const productCarousel = tns({
-  container: '.product-carousel .slider-list',
-  controls: false,
-  navContainer: '.thumbnail-list',
-  navAsThumbnails: true,
-  arrowKeys: true,
-  autoplay: true,
-  autoplayHoverPause: true,
-  autoplayButtonOutput: false,
-  mouseDrag: true,
-  preventScrollOnTouch: true,
-});
-
 const commonOptions = {
   navAsThumbnails: true,
   arrowKeys: true,
   mouseDrag: true,
   preventScrollOnTouch: true,
 };
+
+const productCarousel = tns({
+  ...commonOptions,
+  container: '.product-carousel .slider-list',
+  controls: false,
+  navContainer: '.product-carousel .thumbnail-list',
+  autoplay: true,
+  autoplayHoverPause: true,
+  autoplayButtonOutput: false,
+});
 
 const userGalleryMobile = tns({
   ...commonOptions,
