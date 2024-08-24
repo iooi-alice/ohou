@@ -49,3 +49,11 @@
     grid-column: span 5;
   }
 }
+
+.row-product-tab {
+  grid-column: span 4;
+
+  @include responsive(D) {
+    grid-column: span 8;
+  }
+}
