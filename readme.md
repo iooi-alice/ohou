@@ -1,4 +1,6 @@
-# ohou
+# 오늘의 집
+
+<img width="1904" alt="image" src="https://github.com/user-attachments/assets/9c4b05fb-8cc4-4bf7-969e-551c10c0a458">
 
 ### 1. GNB
 
